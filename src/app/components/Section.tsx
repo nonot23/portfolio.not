@@ -1,3 +1,4 @@
+'use client'
 import Not from "../../../public/img/not.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,6 +6,7 @@ import { FaSquareFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLine } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
+import { TypeAnimation } from "react-type-animation";
 import MotionDiv from "./Motion";
 
 export default function Section() {
@@ -21,7 +23,16 @@ export default function Section() {
           >
             <h1 className="text-3xl font-bold mb-4">Hi, I’M </h1>
             <h1 className="text-5xl font-bold mb-4 text-[var(--primary-color)]">
-              Nattapol Sonthirak (Not)
+              <TypeAnimation
+                sequence={[
+                  "Nattapol Sonthirak (Not)",
+                  1300,
+                ]}
+                wrapper="span"
+                cursor={true}
+                repeat={0} // แสดงรอบเดียว
+                style={{ display: "inline-block" }}
+              />
             </h1>
             <p className="text-lg max-w-2xl">
               I&#39;m determined to become a Frontend Web Developer, even though
